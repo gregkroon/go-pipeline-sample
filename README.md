@@ -2,7 +2,7 @@
 
 Introduction
 ========================
-This repository is a home for snippets of YAML code and a sample hello world server for the Harness CI Community.1
+This repository is a home for snippets of YAML code and a sample hello world server for the Harness CI Community.2
 
 ## Getting Started
 
