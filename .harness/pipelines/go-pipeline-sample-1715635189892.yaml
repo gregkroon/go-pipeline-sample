@@ -16,6 +16,7 @@ pipeline:
         spec:
           caching:
             enabled: true
+            paths: []
           cloneCodebase: true
           execution:
             steps:
@@ -88,4 +89,12 @@ pipeline:
           runtime:
             type: Cloud
             spec: {}
+          slsa_provenance:
+            enabled: true
+            attestation:
+              type: cosign
+              spec:
+                private_key: cosignkey
+                password: cosignpass
         type: CI
+        description: ""
