@@ -51,6 +51,27 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
+                  type: SscaOrchestration
+                  name: SBOM Orchestration
+                  identifier: SBOM_Orchestration
+                  spec:
+                    mode: generation
+                    tool:
+                      type: Syft
+                      spec:
+                        format: spdx-json
+                    source:
+                      type: docker
+                      spec:
+                        connector: docker
+                        image: munkys123/gosample
+                    sbom_drift:
+                      base: last_generated_sbom
+                    resources:
+                      limits:
+                        memory: 500Mi
+                        cpu: "0.5"
+              - step:
                   identifier: dockerbuild
                   name: docker_build
                   spec:
