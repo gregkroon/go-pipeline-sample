@@ -55,7 +55,7 @@ pipeline:
                   name: docker_build
                   spec:
                     connectorRef: docker
-                    repo: hello/world
+                    repo: munkys123/gosample
                     tags:
                       - latest
                     caching: true
